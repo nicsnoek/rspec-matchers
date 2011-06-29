@@ -82,10 +82,10 @@ describe CollectionMatchers do
     end
   end
 
-  describe "Some Bizarre Custom Matcher" do
+  describe "Some Bizarre Custom Consecutive Item Matcher" do
 
     def have_alternating_signs_on(&determine_value_block)
-      OrderMatcher.new("alternate sign", determine_value_block) {|x1, x2| x1 > 0 ? (x2 < 0) : (x2 > 0) }
+      ConsecutiveItemMatcher.new("alternate sign", determine_value_block) {|x1, x2| x1 > 0 ? (x2 < 0) : (x2 > 0) }
     end
 
     def have_alternating_signs
